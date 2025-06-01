@@ -8,8 +8,8 @@ class LinkViewModelFactory(
     private val repository: LinkRepository
 ) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(LinkViewModel::class.java)) {
-            return LinkViewModel(repository) as T
+        if (modelClass.isAssignableFrom(LinkViewModelNew::class.java)) {
+            return LinkViewModelNew(repository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

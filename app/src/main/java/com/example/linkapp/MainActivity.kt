@@ -5,18 +5,15 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.linkapp.data.LinkDatabase
 import com.example.linkapp.data.LinkRepository
-import com.example.linkapp.ui.MainScreen
 import com.example.linkapp.ui.theme.LinkAppTheme
-import com.example.linkapp.viemodel.LinkViewModel
+import com.example.linkapp.viemodel.LinkViewModelNew
 import com.example.linkapp.viemodel.LinkViewModelFactory
 
 import androidx.compose.foundation.background
@@ -51,7 +48,7 @@ class MainActivity : ComponentActivity() {
         val database = LinkDatabase.getDatabase(applicationContext)
         val repository = LinkRepository(database.linkDao())
         val viewModelFactory = LinkViewModelFactory(repository)
-        val linkViewModel = ViewModelProvider(this, viewModelFactory)[LinkViewModel::class.java]
+        val linkViewModel = ViewModelProvider(this, viewModelFactory)[LinkViewModelNew::class.java]
 
         setContent {
             LinkAppTheme {

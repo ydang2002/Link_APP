@@ -6,10 +6,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.runtime.collectAsState
-import com.example.linkapp.viemodel.LinkViewModel
+import com.example.linkapp.viemodel.LinkViewModelNew
 
 @Composable
-fun MainScreen(viewModel: LinkViewModel, modifier: Modifier) {
+fun MainScreen(viewModel: LinkViewModelNew, modifier: Modifier) {
     val links by viewModel.links.collectAsState()
     val dialogState by viewModel.dialogState.collectAsState()
 
