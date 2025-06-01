@@ -10,6 +10,7 @@ import com.example.linkapp.model.LinkType
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+// test git rebase branch 2
 // test rebase branch test 1
 class LinkViewModelNew(private val repository: LinkRepository) : ViewModel() {
 
