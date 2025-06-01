@@ -5,11 +5,13 @@ import androidx.lifecycle.viewModelScope
 import com.example.linkapp.data.LinkEntity
 import com.example.linkapp.data.LinkRepository
 import com.example.linkapp.model.LinkType
+
+
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class LinkViewModel(private val repository: LinkRepository) : ViewModel() {
+class LinkViewModelNew(private val repository: LinkRepository) : ViewModel() {
 
     private val _links = MutableStateFlow<List<LinkEntity>>(emptyList())
     val links: StateFlow<List<LinkEntity>> = _links
