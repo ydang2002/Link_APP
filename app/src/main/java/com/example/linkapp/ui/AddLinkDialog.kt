@@ -9,6 +9,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 
 //test git rebase
+//test git rebase
 
 import androidx.compose.ui.window.Dialog
 import com.example.linkapp.model.LinkType
@@ -23,6 +24,9 @@ fun AddLinkDialog(
     var autoConnect by remember { mutableStateOf(link.autoConnect) }
     var highLatency by remember { mutableStateOf(link.highLatency) }
     var selectedType by remember { mutableStateOf(if (link is LinkType.Serial) "Serial" else "UDP") }
+
+
+    //test git rebase 2
 
 
     //test git rebase 2
