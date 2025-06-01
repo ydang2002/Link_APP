@@ -10,7 +10,7 @@ import com.example.linkapp.model.LinkType
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-
+// test rebase branch test 1
 class LinkViewModelNew(private val repository: LinkRepository) : ViewModel() {
 
     private val _links = MutableStateFlow<List<LinkEntity>>(emptyList())
