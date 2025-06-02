@@ -36,10 +36,14 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import android.widget.Toast
 import android.content.Context
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.clickable
 import androidx.compose.ui.platform.LocalContext
+import com.example.linkapp.ui.LanguagePickerScreen
+import com.example.linkapp.viemodel.LanguageViewModel
+import androidx.activity.viewModels
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -49,10 +53,16 @@ class MainActivity : ComponentActivity() {
         val repository = LinkRepository(database.linkDao())
         val viewModelFactory = LinkViewModelFactory(repository)
         val linkViewModel = ViewModelProvider(this, viewModelFactory)[LinkViewModelNew::class.java]
+        val languageViewModel: LanguageViewModel by viewModels()
 
         setContent {
             LinkAppTheme {
-                DroneControlScreen()
+                LanguagePickerScreen(languageViewModel)
+//                LanguagePickerScreen()
+
+//                DroneControlScreen()
+
+
 //                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 //                    MainScreen(
 //                        viewModel = linkViewModel,
