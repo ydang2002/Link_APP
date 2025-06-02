@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ỨngDụngĐaNgônNgữ</string>
+    <string name="greeting">Xin chào!</string>
+    <string name="choose_language">Chọn ngôn ngữ</string>
+    <string name="english">Tiếng Anh</string>
+    <string name="vietnamese">Tiếng Việt</string>
+</resources>
